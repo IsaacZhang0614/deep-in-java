@@ -8,6 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+    <name>Concurrency Basic :: # 2</name>
 
     <groupId>com.sxzhongf</groupId>
     <artifactId>stage-3-lesson-2</artifactId>
