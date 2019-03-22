@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Vector;
 
 /**
- * TODO
+ * 对比Vector & ArrayList
+ * 查看synchronized对性能的影响
  *
  * @author <a href="mailto:magicianisaac@gmail.com">Isaac.Zhang</a>
  * @see
