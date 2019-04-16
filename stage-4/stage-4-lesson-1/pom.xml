@@ -9,9 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.sxzhongf</groupId>
     <artifactId>stage-4-lesson-1</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <name>deep in java phase 4 : lesson 1</name>
 
 
 </project>
