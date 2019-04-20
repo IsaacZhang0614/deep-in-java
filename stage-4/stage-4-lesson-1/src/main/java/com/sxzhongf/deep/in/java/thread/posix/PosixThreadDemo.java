@@ -12,7 +12,7 @@ public class PosixThreadDemo {
     public static void main(String[] args) throws InterruptedException {
 
         //创建java线程
-        Thread t1 =  new Thread(PosixThreadDemo::HelloPosix);
+        Thread t1 = new Thread(PosixThreadDemo::HelloPosix);
 
         //显示启动线程
         t1.start(); //pthread_create()
@@ -24,9 +24,12 @@ public class PosixThreadDemo {
         //pthread_t t1; //pthread_t 为线程类型
         //pthread_create(&t1,NULL,HelloPosix,NULL);
         //pthread_join(t1,NULL);
+
+        //当isAlive()返回false时，JVM中的线程已经消亡
+        System.out.printf("线程状态 :%s,是否存活。: %s \n", t1.getState(), t1.isAlive());
     }
 
-    static void HelloPosix(){
+    static void HelloPosix() {
         System.out.println("Hello Posix Thread.");
     }
 }
