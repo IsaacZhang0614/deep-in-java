@@ -39,7 +39,7 @@ public class HappensBeforeRelationshipDemo {
 
         t.start();
 
-        // main 线程调用 子线程t的join方法，在join方法返回之前，其他所有Actions都会执行完成
+        // main 线程调用 子线程t的join方法，在join方法返回之前，t 线程的l其他所有Actions都会执行完成
         t.join();
     }
 }
