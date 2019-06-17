@@ -9,6 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
+    <modules>
+        <module>stage-5-lesson-1</module>
+    </modules>
 
     <groupId>com.sxzhongf</groupId>
     <artifactId>stage-5</artifactId>
