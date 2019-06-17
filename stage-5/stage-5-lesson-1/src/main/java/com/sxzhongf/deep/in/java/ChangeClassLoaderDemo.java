@@ -48,12 +48,12 @@ public class ChangeClassLoaderDemo {
     }
 }
 
-/**
- * V1
- */
-class User {
 
-}
+//V1
+//class User {
+//
+//}
+
 //V2
 //class User{
 //

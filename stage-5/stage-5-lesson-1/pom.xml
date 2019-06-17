@@ -17,5 +17,12 @@
     <name>deep-in-java-stage-5-lesson-1</name>
     <description>《一入java深似海》第五期::Java存储管理 第一节::Java 类的层次</description>
 
-
+    <dependencies>
+        <!--apache 公共类库-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+    </dependencies>
 </project>
