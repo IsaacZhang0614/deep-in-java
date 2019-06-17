@@ -8,19 +8,17 @@ package com.sxzhongf.deep.in.java;
  */
 public class ChangeClassLoaderDemo {
 
+    /**
+     * ClassLoader previousClassLoader = Thread.currentThread().getContextClassLoader();
+     * previousClassLoader 能够加载User.class V1版本(user-api-1.0.0.jar文件中，在/Users/Isaac/classpath1)
+     * User.class V2版本(user-api-2.0.0.jar文件中，在/Users/Isaac/classpath2)
+     * 如果想要操作User.class V2版本
+     * previousClassLoader ClassPath -> /classpath1
+     * newClassLoader ClassPath -> /classpath2
+     * 通常 系统或者应用（包括自定义，如：UserClassLoader） ClassLoader 均为 URLClassLoader 子类
+     */
     public static void main(String[] args) {
-        /**
-         * ClassLoader previousClassLoader = Thread.currentThread().getContextClassLoader();
-         * previousClassLoader 能够加载User.class V1版本(user-api-1.0.0.jar文件中，在/Users/Isaac/classpath1)
-         * User.class V2版本(user-api-2.0.0.jar文件中，在/Users/Isaac/classpath2)
-         *
-         * 如果想要操作User.class V2版本
-         *
-         * previousClassLoader ClassPath -> /classpath1
-         * newClassLoader ClassPath -> /classpath2
-         *
-         * 通常 系统或者应用（包括自定义，如：UserClassLoader） ClassLoader 均为 URLClassLoader 子类
-         */
+
     }
 
     private static void changeClassLoader(ClassLoader newClassLoader) {
@@ -33,15 +31,15 @@ public class ChangeClassLoaderDemo {
             //doSomeActions
             loadUser();
         } catch (SecurityException e) {
-
+            e.printStackTrace();
         } finally {
             currentThread.setContextClassLoader(previousClassLoader);
         }
     }
 
-    private static void loadUser(){
+    private static void loadUser() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
-        try{
+        try {
             classLoader.loadClass("User");// 使用V2
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

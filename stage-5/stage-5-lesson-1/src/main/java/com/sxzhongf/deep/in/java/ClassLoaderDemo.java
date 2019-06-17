@@ -48,7 +48,7 @@ public class ClassLoaderDemo {
             //利用新的ClassLoader 来加载类
             //doSomeActions
         } catch (SecurityException e) {
-
+            e.printStackTrace();
         } finally {
             currentThread.setContextClassLoader(previousClassLoader);
         }
