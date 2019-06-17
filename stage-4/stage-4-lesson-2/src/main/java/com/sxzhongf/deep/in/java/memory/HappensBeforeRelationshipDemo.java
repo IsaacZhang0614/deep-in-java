@@ -16,7 +16,7 @@ public class HappensBeforeRelationshipDemo {
     /**
      * first situation
      */
-    private static void inSameThread(){
+    private static void inSameThread() {
         // #1 : Thread1
         // #2 : Thread2
     }
@@ -24,7 +24,7 @@ public class HappensBeforeRelationshipDemo {
     /**
      * second situation
      */
-    private static void constructorHappensBeforeFinalizer(){
+    private static void constructorHappensBeforeFinalizer() {
         // 构造 早于 销毁
         // 构造对象是在用户线程（main、子线程）中执行
         // Finalizer线程 操作是JVM线程（GC线程）中执行
@@ -33,7 +33,7 @@ public class HappensBeforeRelationshipDemo {
     }
 
     private static void threadJoinMethod() throws InterruptedException {
-        Thread t = new Thread(()->{
+        Thread t = new Thread(() -> {
 
         });
 

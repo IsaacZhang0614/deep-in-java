@@ -32,7 +32,7 @@ public class ThreadWaitAndNotifyDemo {
             </pre></blockquote>
          */
         Object monitor2 = Object.class;
-        synchronized(monitor2){
+        synchronized (monitor2) {
             //为什么monitor#notify不能保证完全释放
 //            monitor2.notify();
             monitor2.notifyAll();
@@ -46,9 +46,9 @@ public class ThreadWaitAndNotifyDemo {
 
     public static void sayHello() {
         Thread thread = Thread.currentThread();
-        synchronized(monitor){
+        synchronized (monitor) {
             try {
-                System.out.printf("线程[%s] 进入等待状态...\n",thread.getName());
+                System.out.printf("线程[%s] 进入等待状态...\n", thread.getName());
                 /*
                  * Object#wait 与 Thread#join 看起来效果类似
                  * 实际上 Thread#join 方法就是调用了Thread对象集成自Object对象的wait(int)方法
@@ -59,7 +59,7 @@ public class ThreadWaitAndNotifyDemo {
                 e.printStackTrace();
             }
 
-            System.out.printf("线程[%s] 恢复执行状态...\n",thread.getName());
+            System.out.printf("线程[%s] 恢复执行状态...\n", thread.getName());
         }
     }
 }

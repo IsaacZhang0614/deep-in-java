@@ -91,8 +91,8 @@ public class QuickSortDemo<T extends Comparable<T>> implements Sort<T> {
             /**
              * {@link Integer} compare 结果是
              * {@code (x < y) ? -1 : ((x == y) ? 0 : 1);}
-              */
-            if (values[j].compareTo(pivot) < 1){ // means <=0
+             */
+            if (values[j].compareTo(pivot) < 1) { // means <=0
 
                 T temp = values[i]; //取出低位数字
                 values[i] = values[j]; // 将高位数值放入低位

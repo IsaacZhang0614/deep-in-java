@@ -5,10 +5,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 多线程环境下 {@link ArrayBlockingQueue}
- *
  * 总结：
  * 使用{@link BlockingQueue} ，尽可能使用put，避免使用offer,最好不要用add
  * 否则会遇到N多坑
+ *
  * @author <a href="mailto:magicianisaac@gmail.com">Isaac.Zhang</a>
  * @see
  * @since

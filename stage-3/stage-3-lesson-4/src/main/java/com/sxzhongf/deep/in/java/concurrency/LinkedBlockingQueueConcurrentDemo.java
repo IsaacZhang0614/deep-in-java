@@ -34,7 +34,7 @@ public class LinkedBlockingQueueConcurrentDemo {
                 }
             });
 
-            executorService.submit(()->{
+            executorService.submit(() -> {
                 try {
                     System.out.printf("序号 : [%d], 线程ID : [%s],线程名称 : [%s], 队列数据 : [%d] \n",
                             a.incrementAndGet(),

@@ -45,7 +45,7 @@ public class InitializeObjectPropertiesDemo {
          * 线程不安全，初始化的时候数据是A，B，C
          * 但是引用对象可被改变
          */
-        tags.set(2,"SS");
+        tags.set(2, "SS");
 
         Thread thread = new Thread(() -> {
             person.toString();

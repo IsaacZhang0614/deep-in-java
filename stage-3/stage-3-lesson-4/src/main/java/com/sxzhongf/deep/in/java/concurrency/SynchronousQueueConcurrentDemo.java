@@ -6,10 +6,8 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.SynchronousQueue;
 
 /**
- *
  * 多线程环境下 {@link SynchronousQueue}
  * SynchronousQueue 主要适用于互斥场景
- *
  * 总结：
  * 使用{@link BlockingQueue} ，尽可能使用put，避免使用offer,最好不要用add
  * 否则会遇到N多坑
@@ -27,7 +25,7 @@ public class SynchronousQueueConcurrentDemo {
 
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
-        executorService.execute(()->{
+        executorService.execute(() -> {
             try {
                 System.out.printf("线程ID : [%s],线程名称 : [%s], 插入线程 \n",
                         Thread.currentThread().getId(),
@@ -39,7 +37,7 @@ public class SynchronousQueueConcurrentDemo {
             }
         });
 
-        executorService.execute(()->{
+        executorService.execute(() -> {
             try {
                 System.out.printf("线程ID : [%s],线程名称 : [%s], 队列数据 : [%d] \n",
                         Thread.currentThread().getId(),

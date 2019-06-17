@@ -27,7 +27,7 @@ public class SynchronizedDemo {
 
         // Object#wait() 和Notify()或NotifyAll()
         // 使用前提：synchronized(object) -> 中
-        synchronized(Object.class){
+        synchronized (Object.class) {
 //            Object.class.wait();
         }
 

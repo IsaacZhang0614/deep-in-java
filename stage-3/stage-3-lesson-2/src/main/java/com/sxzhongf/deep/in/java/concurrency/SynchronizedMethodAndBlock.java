@@ -36,8 +36,6 @@ public class SynchronizedMethodAndBlock {
 
     /**
      * synchronized block
-     *
-     * @param message
      */
     private static void doEcho(String message) {
         //Monitor 不是必须为当前类（SynchronizedMethodAndBlock.class）
@@ -57,8 +55,6 @@ public class SynchronizedMethodAndBlock {
 
     /**
      * synchronized method (实例或类的方法)
-     *
-     * @param message
      */
     private synchronized static void echo(String message) {
         System.out.println("synchronized method exec : " + message);

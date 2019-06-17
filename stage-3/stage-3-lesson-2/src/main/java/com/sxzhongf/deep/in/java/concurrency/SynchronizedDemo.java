@@ -10,7 +10,7 @@ package com.sxzhongf.deep.in.java.concurrency;
 public class SynchronizedDemo {
     public static void main(String[] args) {
 
-        synchronized(SynchronizedDemo.class){
+        synchronized (SynchronizedDemo.class) {
 
         }
 

@@ -26,7 +26,7 @@ public class ThreadDemo {
         System.out.println(thread.getState());
     }
 
-    public static void print(){
+    public static void print() {
         System.out.printf("线程[Id : %s]:Hello Lambda!\n", Thread.currentThread().getId());
     }
 

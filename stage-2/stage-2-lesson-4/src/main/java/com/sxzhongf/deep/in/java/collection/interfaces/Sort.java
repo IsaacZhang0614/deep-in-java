@@ -16,7 +16,7 @@ public interface Sort<T extends Comparable<T>> {
     /**
      * 接收可变参数
      */
-    static <T> T[] of(T... values){
+    static <T> T[] of(T... values) {
         return values;
     }
 }

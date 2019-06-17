@@ -25,7 +25,7 @@ public class ProcessInfoDemo {
 
         Instant instant = Instant.ofEpochMilli(runtimeMXBean.getStartTime());
         LocalDateTime localDate = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
-        System.out.println("当前进程启动时间 : " + localDate );
+        System.out.println("当前进程启动时间 : " + localDate);
         System.out.println("当前线程上线时间 : " + runtimeMXBean.getUptime());
         System.out.println("当前线程活跃数量 : " + threadMXBean.getThreadCount());
 

@@ -32,9 +32,6 @@ public class ArrayCopyDemo {
 
     /**
      * 数组设置为Object的原因
-     *
-     * @param source
-     * @param destination
      */
     private static void arrayCopy(Object[] source, Object[] destination) {
 

@@ -14,9 +14,8 @@ public class SynchronizedWithRelationDemo {
     //声明一个共享变量
     private static int sharedData;
 
-    private static void threadStart()
-    {
-        Thread thread = new Thread(()->{
+    private static void threadStart() {
+        Thread thread = new Thread(() -> {
 
         });
 
@@ -30,10 +29,8 @@ public class SynchronizedWithRelationDemo {
 
     /**
      * 改变共享变量值
-     *
-     * @param data
      */
-    private static void changeData(int data){
+    private static void changeData(int data) {
 
         // T1 和 T2线程进入
         // T1 获得锁
@@ -43,7 +40,7 @@ public class SynchronizedWithRelationDemo {
         // T3 获得锁
         // T1#unlock -> T3#lock -> T3#unlock
 
-        synchronized (lock){
+        synchronized (lock) {
             sharedData = data;
         }
     }

@@ -31,7 +31,7 @@ public class ThreadInterruptDemo {
 //        }
 
         //interrupt() 验证报错
-        synchronized (object){
+        synchronized (object) {
             try {
                 object.wait(1000);
             } catch (InterruptedException e) {

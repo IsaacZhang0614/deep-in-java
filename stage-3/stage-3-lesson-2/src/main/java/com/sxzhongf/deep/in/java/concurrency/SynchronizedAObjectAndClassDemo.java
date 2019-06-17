@@ -14,12 +14,12 @@ public class SynchronizedAObjectAndClassDemo {
     public static void main(String[] args) {
 
         //对象锁
-        synchronized(object){ //Monitor 只会 监视 object
+        synchronized (object) { //Monitor 只会 监视 object
             //Todo...
         }
 
         //类锁
-        synchronized(Object.class){
+        synchronized (Object.class) {
             //JVM中，类对象存在于 Metadata 区域（Java 8+）
             //或者Perm 区域（<=Java 7）
 
