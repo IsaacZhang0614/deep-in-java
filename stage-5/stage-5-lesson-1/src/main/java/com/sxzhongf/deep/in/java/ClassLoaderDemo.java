@@ -21,12 +21,14 @@ public class ClassLoaderDemo {
         //System ClassLoader
         //Java 8 输出结果：sun.misc.Launcher$AppClassLoader@18b4aac2
         //Java 9 以后输出结果：包名路径改变了：jdk.internal.loader.ClassLoaders$AppClassLoader@18b4aac2
-        System.out.println("getSystemClassLoader : " + ClassLoader.getSystemClassLoader()); //只读
+        //ClassLoader.getSystemClassLoader() 只读
+        System.out.println("getSystemClassLoader : " + ClassLoader.getSystemClassLoader());
 
         //Application ClassLoader
         //Java 8 输出结果：sun.misc.Launcher$AppClassLoader@18b4aac2
         //Java 9 以后输出结果：包名路径改变了：jdk.internal.loader.ClassLoaders$AppClassLoader@18b4aac2
-        System.out.println("getContextClassLoader : " + Thread.currentThread().getContextClassLoader()); //可写
+        //可修改 Thread.currentThread().getContextClassLoader()
+        System.out.println("getContextClassLoader : " + Thread.currentThread().getContextClassLoader());
 
         //如何实现类隔离，通过修改 Thread 上下文 ClassLoader
 //        changeClassLoader()
@@ -40,7 +42,7 @@ public class ClassLoaderDemo {
         Thread currentThread = Thread.currentThread();
 
         //这个newClassLoader可是任意ClassLoader,我们以 SystemClassLoader为例
-//        ClassLoader newClassLoader = ClassLoader.getSystemClassLoader();
+//        {code}ClassLoader newClassLoader = ClassLoader.getSystemClassLoader(){/code};
         ClassLoader previousClassLoader = currentThread.getContextClassLoader();
         try {
             // 需要申请 setContextClassLoader 安全权限，否则会报SecurityException 异常
@@ -67,7 +69,7 @@ public class ClassLoaderDemo {
     private static void loadSomeClasses() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 
-//        ServiceLoader.load(String.class);
+//        {code}ServiceLoader.load(String.class);{/code}
         try {
             classLoader.loadClass("abc");
         } catch (ClassNotFoundException e) {

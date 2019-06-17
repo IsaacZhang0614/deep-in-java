@@ -40,14 +40,17 @@ public class ChangeClassLoaderDemo {
     private static void loadUser() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         try {
-            classLoader.loadClass("User");// 使用V2
+            // 使用V2
+            classLoader.loadClass("User");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 }
 
-//V1
+/**
+ * V1
+ */
 class User {
 
 }
