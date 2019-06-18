@@ -4,6 +4,7 @@ import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.stream.Stream;
 
 /**
  * ClassLoadingDemo for 类加载过程演示
@@ -15,7 +16,7 @@ import java.io.IOException;
  */
 public class ClassLoadingDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
 
         //获取当前main线程的ClassLoader
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
@@ -42,6 +43,33 @@ public class ClassLoadingDemo {
         //定义Class对象
         Class<?> userClass = myClassLoader.defineClass(className, classFile);
         System.out.println("customize class load to get : " + userClass);
+
+        //利用反射展示当前Class对象的属性
+        //屏蔽掉：System.out.println("当前类属性：" + userClass.getDeclaredFields());
+
+        Stream.of(userClass.getDeclaredFields()).forEach(
+                field -> {
+                    System.out.println("Stream field all path : " + field);
+                    System.out.println("Stream field : " + field.getName());
+                }
+        );
+
+        Class<?> userClassFromThreadContextClassLoader = classLoader.loadClass(className);
+
+        //User.class 被MyClassLoader加载后，是否与线程上下文加载的User.class 一致？
+        //答案是不一致
+        //这个现象能够解释 Spring 中spring-boot-devtools 模块中的Class != Class问题
+        System.out.println(userClass == userClassFromThreadContextClassLoader);
+
+        //重新替换掉当前线程上下文 ClassLoader
+        //将myClassLoader 放入 Thread.currentThread().getContextClassLoader()
+        Thread.currentThread().setContextClassLoader(myClassLoader);
+
+        //老得线程上下文 ClassLoader 是MyClassLoader的parent(代码如下：super(Thread.currentThread().getContextClassLoader());)
+        //由于双亲委派，即使是MyClassLoader重新调用loadClass(String),也不会重新加载
+        Class<?> userClassFromMyClassLoader = classLoader.loadClass(className);
+        System.out.println(userClass == userClassFromMyClassLoader);
+
     }
 
     private static class MyClassLoader extends ClassLoader {
@@ -57,6 +85,7 @@ public class ClassLoadingDemo {
             byte[] bytes = loadBytes(classFile);
 
             //利用ClassLoader defineClass方法来定义 Class
+            //可用于动态加载
             return super.defineClass(name, bytes, 0, bytes.length);
         }
 
