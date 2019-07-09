@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>deep-in-java</artifactId>
+        <groupId>com.sxzhongf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
+
+    <groupId>com.sxzhongf</groupId>
+    <artifactId>daily-question</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>daily-question</name>
+    <description>
+        「小马哥每日一问」2019.07.08 期
+        https://segmentfault.com/t/%E6%AF%8F%E6%97%A5%E4%B8%80%E9%A2%98
+    </description>
+
+
+</project>

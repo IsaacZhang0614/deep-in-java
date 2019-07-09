@@ -2,20 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>stage-5</artifactId>
+        <groupId>com.sxzhongf</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
+    <packaging>jar</packaging>
 
     <groupId>com.sxzhongf</groupId>
-    <artifactId>deep-in-java</artifactId>
-    <packaging>pom</packaging>
-
+    <artifactId>stage-5-lesson-2</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>stage-3</module>
-        <module>stage-2</module>
-        <module>stage-4</module>
-        <module>stage-5</module>
-        <module>daily-question</module>
-    </modules>
+    <name>deep-in-java-stage-5-lesson-2</name>
+    <description>《一入java深似海》第五期::Java存储管理 第二节::Java 内存分配</description>
 
 
     <build>
@@ -23,11 +22,9 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
+                <version>3.8.0</version>
             </plugin>
         </plugins>
     </build>
+
 </project>

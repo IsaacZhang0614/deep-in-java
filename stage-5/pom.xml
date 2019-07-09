@@ -12,6 +12,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>stage-5-lesson-1</module>
+        <module>stage-5-lesson-2</module>
     </modules>
 
     <!--<groupId>com.sxzhongf</groupId>-->
