@@ -19,7 +19,7 @@ public class ProcessInfoDemo {
         ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
         OperatingSystemMXBean operatingSystemMXBean = ManagementFactory.getOperatingSystemMXBean();
 
-        long pid = ProcessHandle.current().pid();
+        long pid = 1L;//ProcessHandle.current().pid();
 
         System.out.println("[Java 9+ 的查询方式]当前进程ID : " + pid);
 

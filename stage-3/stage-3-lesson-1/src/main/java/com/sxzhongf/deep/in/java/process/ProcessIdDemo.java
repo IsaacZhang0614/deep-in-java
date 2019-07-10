@@ -27,14 +27,14 @@ public class ProcessIdDemo {
      */
     private static void getProcessIdInJava10() {
         RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();
-        System.out.println("[Java 10 的查询方式]当前进程ID : " + runtimeMXBean.getPid());
+//        System.out.println("[Java 10 的查询方式]当前进程ID : " + runtimeMXBean.getPid());
     }
 
     /**
      * Java 9之后的实现方式
      */
     private static void getProcessIdInJava9() {
-        long pid = ProcessHandle.current().pid();
+        long pid = 1L;//ProcessHandle.current().pid();
         System.out.println("[Java 9+ 的查询方式]当前进程ID : " + pid);
     }
 
