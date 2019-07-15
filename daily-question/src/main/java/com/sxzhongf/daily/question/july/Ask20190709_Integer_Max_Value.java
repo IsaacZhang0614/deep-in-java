@@ -1,4 +1,4 @@
-package com.sxzhongf.daily.question;
+package com.sxzhongf.daily.question.july;
 
 /**
  * Ask20190709_Integer_Max_Value for 「小马哥每日一问」2019.07.09 期

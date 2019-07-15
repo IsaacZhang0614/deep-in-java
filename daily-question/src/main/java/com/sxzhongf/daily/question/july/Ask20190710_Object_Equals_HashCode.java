@@ -1,4 +1,4 @@
-package com.sxzhongf.daily.question;
+package com.sxzhongf.daily.question.july;
 
 import java.util.HashSet;
 import java.util.Set;

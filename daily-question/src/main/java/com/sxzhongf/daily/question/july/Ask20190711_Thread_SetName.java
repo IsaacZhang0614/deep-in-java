@@ -1,4 +1,4 @@
-package com.sxzhongf.daily.question;
+package com.sxzhongf.daily.question.july;
 
 /**
  * Ask20190711_Thread_SetName for TODO

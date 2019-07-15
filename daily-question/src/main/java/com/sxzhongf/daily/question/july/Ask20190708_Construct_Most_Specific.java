@@ -1,4 +1,4 @@
-package com.sxzhongf.daily.question;
+package com.sxzhongf.daily.question.july;
 
 /**
  * Ask20190708_Construct_Most_Specific for 「小马哥每日一问」2019.07.08 期

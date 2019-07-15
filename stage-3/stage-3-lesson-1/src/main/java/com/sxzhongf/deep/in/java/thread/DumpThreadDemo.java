@@ -17,7 +17,7 @@ public class DumpThreadDemo {
         Thread.dumpStack();
 
         //Java 9 Stack 实现
-        StackWalker stackWalker = StackWalker.getInstance();
-        stackWalker.forEach(System.out::println);
+//        StackWalker stackWalker = StackWalker.getInstance();
+//        stackWalker.forEach(System.out::println);
     }
 }
