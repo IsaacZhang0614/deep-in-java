@@ -1,7 +1,7 @@
 package com.sxzhongf.deep.in.jvm.stage3;
 
 /**
- * TestGCAllocate for TODO
+ * TestGCAllocate for
  *
  * @author <a href="mailto:magicianisaac@gmail.com">Isaac.Zhang | 若初</a>
  * @since 2020 /3/22
