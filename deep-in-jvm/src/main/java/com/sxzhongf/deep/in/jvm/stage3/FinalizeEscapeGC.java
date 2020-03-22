@@ -3,6 +3,14 @@ package com.sxzhongf.deep.in.jvm.stage3;
 /**
  * FinalizeEscapeGC for 测试如何通过finalize讨论被GC
  *
+ * -XX:+PrintGC  查看 gc 基本信息
+ * -XX:+PrintGCDetails 查看 gc 详细信息
+ * -XX:+PrintHeapAtGC 查看 gc 前后堆、方法区可用容量变化
+ * -XX:+PrintGCApplicationConcurrentTime 查看GC过程中用户线程并发时间以及停顿时间
+ * -XX:+PrintAdaptiveSizePolicy 查看收集器Ergonomics机制（自动设置堆空间各分代区域大小、
+ *                              收集目标等内容）
+ * -XX:+PrintTenuringDistribution 查看熬过收集后剩余对象的年龄分布信息
+ *
  * @author <a href="mailto:magicianisaac@gmail.com">Isaac.Zhang | 若初</a>
  * @since 2020/3/19
  **/
